@@ -31,7 +31,6 @@ module.exports = (grunt) ->
                     pkg: grunt.file.readJSON "../master/package.json"
                 files:
                     "index.html": "index.coffee"
-                    "rus.html": "rus.coffee"
 
     grunt.loadNpmTasks "grunt-contrib-watch"
     grunt.loadNpmTasks "grunt-contrib-copy"
