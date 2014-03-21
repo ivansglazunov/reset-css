@@ -1,5 +1,5 @@
-# ResetCSS / reset-css
-0.1.0
+# [ResetCSS / reset-css / vc-reset-css](http://vancivelik.github.io/reset-css)
+0.2.0
 
 Van Civelik
 

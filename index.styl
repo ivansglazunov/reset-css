@@ -1,0 +1,205 @@
+// ResetCSS / reset-css / vc-reset-css
+// 0.2.0
+// Van Civelik <vancivelik@gmail.com>
+// Full reset CSS, including browser styling.
+// http://github.com/vancivelik/reset-css.git
+
+@import "nib"
+
+vc-reset-indents()
+    margin 0
+    padding 0
+
+vc-reset-borders()
+    outline none
+    border-color transparent
+    border-width 0
+    border-collapse 0
+    border-spacing 0
+
+vs-reset-size()
+    width 0
+    height 0
+
+vs-reset-baseline()
+    vertical-align baseline
+
+vs-reset-background()
+    background transparent
+
+vs-reset-color()
+    color inherit
+
+html, body
+    font-family monospace
+    -ms-text-size-adjust 100% // mobile
+    -webkit-text-size-adjust 100% // mobile
+    color black
+
+html, body, h1, h1, h2, h3, h4, h5, h6, p, a, b, strong, i, blockquote, ul, ol,  li,
+article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, section, summary,
+audio, video, canvas, object, embed, meter, progress,
+button, input[type=button], input[type=reset], input[type=submit],
+input[type=text], input[type=password], textarea, input[type=checkbox], input[type=radio], input[type=file], input[type=image],
+input[type=color], input[type=date], input[type=datetime], input[type=datetime-local], input[type=email], input[type=number], input[type=range], input[type=search], input[type=tel], input[type=time], input[type=url], input[type=month], input[type=week],
+abbr, acronym, pre, code, samp, kbd, mark,
+table, tr, td, th, marquee
+    vs-reset-background()
+
+html, body, h1, h1, h2, h3, h4, h5, h6, p, a, b, strong, i, blockquote, ul, li,
+article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, section, summary,
+audio, video, canvas, object, embed, meter, progress,
+button, input[type=button], input[type=reset], input[type=submit],
+input[type=text], input[type=password], textarea, input[type=checkbox], input[type=radio], input[type=file], input[type=image],
+input[type=color], input[type=date], input[type=datetime], input[type=datetime-local], input[type=email], input[type=number], input[type=range], input[type=search], input[type=tel], input[type=time], input[type=url], input[type=month], input[type=week],
+abbr, acronym, pre, code, samp, kbd, mark, img, hr,
+table, tr, td, th, marquee
+    vc-reset-indents()
+
+html, body, h1, h1, h2, h3, h4, h5, h6, p, a, b, strong, i, blockquote, ul, li,
+article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, section, summary,
+audio, video, canvas, object, embed, meter, progress,
+button, input[type=button], input[type=reset], input[type=submit],
+input[type=text], input[type=password], textarea, input[type=checkbox], input[type=radio], input[type=file], input[type=image],
+input[type=color], input[type=date], input[type=datetime], input[type=datetime-local], input[type=email], input[type=number], input[type=range], input[type=search], input[type=tel], input[type=time], input[type=url], input[type=month], input[type=week],
+abbr, acronym, pre, code, samp, kbd, mark, img, hr,
+table, tr, td, th, marquee
+    vc-reset-borders()
+    &:hover, &:active, &:focus
+        vc-reset-borders()
+
+audio, video, canvas, object, embed, meter, progress, sub, sup
+    vs-reset-baseline()
+
+audio:not([controls])
+    display none
+
+audio, video, canvas, object, embed, meter, progress
+    vs-reset-size()
+
+h1, h1, h2, h3, h4, h5, h6, p, blockquote
+article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, section, summary,
+audio, video, canvas, object, embed, meter, progress
+pre, code
+    display block
+    box-sizing border-box
+
+h1, h1, h2, h3, h4, h5, h6, p, a, b, strong, i, blockquote, ul, ol, li,
+article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, section, summary,
+audio, video, canvas, object, embed, meter, progress,
+button, input[type=button], input[type=reset], input[type=submit],
+input[type=text], input[type=password], textarea, input[type=checkbox], input[type=radio], input[type=file], input[type=image],
+input[type=color], input[type=date], input[type=datetime], input[type=datetime-local], input[type=email], input[type=number], input[type=range], input[type=search], input[type=tel], input[type=time], input[type=url], input[type=month], input[type=week],
+abbr, acronym, pre, code, samp, kbd, mark,
+table, tr, td, th, marquee
+    vs-reset-color()
+
+h1, h1, h2, h3, h4, h5, h6, p, blockquote, small
+    font-size 1em
+
+h1, h1, h2, h3, h4, h5, h6, b, strong
+    font-weight bold
+
+i
+    font-style italic
+
+del, s, strike
+    text-decoration line-through
+
+ul
+    list-style none
+    padding-left 2em
+ol
+
+    padding-left 4em
+
+details
+    appearance none
+    summary
+        appearance none
+        cursor pointer
+        &::-webkit-details-marker
+            display none
+    &:not([open]) >
+        display none
+    &[open] >
+        display block
+
+button, input[type=button], input[type=reset], input[type=submit]
+    cursor pointer
+    &:disabled
+        cursor default
+    appearance button // fix
+    overflow visible // fix
+
+input[type=text], input[type=password], textarea,
+input[type=date], input[type=datetime], input[type=datetime-local], input[type=email], input[type=number], input[type=search], input[type=tel], input[type=time], input[type=url], input[type=month], input[type=week]
+    box-sizing border-box
+    cursor text
+    width 100%
+    &:disabled
+        cursor default
+
+input[type=checkbox], input[type=radio]
+    display none
+
+input[type=checkbox] + label, input[type=radio] + label
+    cursor pointer
+
+input[type=checkbox]:disabled + label, input[type=radio]:disabled + label
+    cursor default
+    opacity 0.5
+
+input[type=checkbox] + label::before, input[type=radio] + label::before
+    content "-"
+
+input[type=checkbox]:checked + label::before, input[type=radio]:checked + label::before
+    content "+"
+
+input[type=color]
+    width 100%
+    cursor pointer
+    &:disabled
+        cursor default
+
+[hidden], template, comment
+    display none
+
+abbr, acronym
+    text-decoration none
+
+dfn
+    font-style normal
+    &:nth-of-type(1)
+        font-style italic
+
+pre
+    overflow auto
+
+sub, sup
+    font-size 0.75em
+    line-height 0
+    position relative
+
+sub
+    bottom -0.3em
+
+sup
+    top -0.5em
+
+hr
+    height 1px
+    background black
+    box-sizing border-box
+
+// fixes
+
+button, select
+    text-transform none
+
+svg:not(:overflow)
+    hrroot hidden
+
+*
+    font-family inherit
+    font-size inherit

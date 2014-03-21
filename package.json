@@ -1,8 +1,11 @@
-    {
+{
     "name": "vc-reset-css",
-    "version": "0.1.0",
+    "version": "0.2.0",
     "author": "Van Civelik <vancivelik@gmail.com>",
     "description": "Full reset CSS, including browser styling.",
+    "bugs": {
+        "url": "http://github.com/vancivelik/reset-css/issues"
+    },
     "repository": {
         "type": "git",
         "url": "http://github.com/vancivelik/reset-css.git"
