@@ -1,11 +1,10 @@
 /*
 ResetCSS / reset-css / vc-reset-css
-0.2.0
+0.2.1
 Van Civelik <vancivelik@gmail.com>
 Full reset CSS, including browser styling.
 http://github.com/vancivelik/reset-css.git
 */
-
 html,
 body {
   font-family: monospace;
@@ -628,6 +627,9 @@ strike {
 }
 ul {
   list-style: none;
+  padding-left: 0;
+}
+li > ul {
   padding-left: 2em;
 }
 ol {

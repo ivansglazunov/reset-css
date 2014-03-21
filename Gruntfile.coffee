@@ -1,3 +1,6 @@
+stylusBanner = (pkg) ->
+    "/*\r\nResetCSS / reset-css / vc-reset-css\r\n#{pkg.version}\r\nVan Civelik <vancivelik@gmail.com>\r\nFull reset CSS, including browser styling.\r\nhttp://github.com/vancivelik/reset-css.git\r\n*/\r\n"
+
 module.exports = (grunt) ->
 
     grunt.initConfig
@@ -7,34 +10,23 @@ module.exports = (grunt) ->
             reset:
                 files: ["index.styl"]
                 tasks: ["stylus:reset", "stylus:resetMin"]
-            tests:
-                files: ["tests/*.stylus", "tests/*.coffee"]
-                tasks: ["stylus:tests", "coffeecup:tests"]
 
         stylus:
             resetMin:
                 options:
                     compress: true
                     use: [require("nib")]
+                    banner: stylusBanner grunt.file.readJSON "package.json"
                 files: "reset.min.css": "index.styl"
             reset:
                 options:
                     compress: false
                     use: [require("nib")]
+                    banner: stylusBanner grunt.file.readJSON "package.json"
                 files: "reset.css": "index.styl"
-            tests:
-                options:
-                    compress: false
-                    use: [require("nib")]
-                files: "tests/style.css": "tests/style.styl"
-
-        coffeecup:
-            tests:
-                expand: false
-                options:
-                    lodash: require "lodash"
-                files: "tests/index.html": "tests/index.coffee"
 
     grunt.loadNpmTasks "grunt-contrib-watch"
     grunt.loadNpmTasks "grunt-contrib-stylus"
     grunt.loadNpmTasks "grunt-coffeecup"
+
+    grunt.registerTask "default", "watch"
