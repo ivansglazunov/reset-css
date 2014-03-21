@@ -41,17 +41,17 @@ html ->
                 "issues"
             text " "
             text this.lodash.escape this.pkg.version
-            p this.lodash.escape this.pkg.description
-            h2 "Motivation to create a project"
-            p "I think, is not enough to smooth out the differences between browsers, I do not like the standard styles. This library smoothes the difference browsers and most of the elements leads to one style."
-            h2 "Browser support"
+            p "Полный CSS сброс, в том числе стиль браузера."
+            h2 "Мотивация для создания проекта"
+            p "Как мне кажется, сгладить различия браузеров недостаточно, мне не нравятся стандарты стилей. Эта библиотека сглаживает разницу браузеров и приводит большинство элементов к одному стилю."
+            h2 "Поддержка браузеров"
             ul ->
                 li "Chrome"
                 li "Firefox"
                 li "Opera"
                 li "Safari 6+"
                 li "Explorer 8+"
-            h2 "Thanks"
+            h2 "Благодарности"
             ul ->
                 li a href: "https://github.com/necolas/normalize.css", "Normalize.css"
                 li a href: "https://github.com/LearnBoost/stylus", "Stylus"

@@ -6,31 +6,32 @@ module.exports = (grunt) ->
         watch:
             reset:
                 files: ["../master/reset.min.css"]
-                tasks: ["copy:default"]
+                tasks: ["copy:reset"]
             index:
-                files: ["style.styl", "index.coffee"]
-                tasks: ["stylus:default", "coffeecup:default"]
+                files: ["style.styl", "*.coffee"]
+                tasks: ["stylus:index", "coffeecup:index"]
 
         copy:
-            default:
-                files: [
-                    src: "../master/reset.min.css", dest: "reset.min.css"
-                ]
+            reset:
+                src: "../master/reset.min.css"
+                dest: "reset.min.css"
 
         stylus:
-            default:
+            index:
                 options:
                     compress: true
                     use: [require("nib")]
                 files: "style.min.css": "style.styl"
 
         coffeecup:
-            default:
+            index:
                 expand: false
                 options:
                     lodash: require "lodash"
                     pkg: grunt.file.readJSON "../master/package.json"
-                files: "index.html": "index.coffee"
+                files:
+                    "index.html": "index.coffee"
+                    "rus.html": "rus.coffee"
 
     grunt.loadNpmTasks "grunt-contrib-watch"
     grunt.loadNpmTasks "grunt-contrib-copy"
