@@ -1,4 +1,3 @@
-lodash = this.lodash
 doctype 5
 html ->
     head ->
@@ -10,7 +9,7 @@ html ->
             a
                 href: "https://github.com/vancivelik"
                 title: "author"
-                "Van Civelik"
+                this.lodash.escape this.pkg.author
             h1 ->
                 text "ResetCSS"
                 text " / "
@@ -19,7 +18,7 @@ html ->
                 abbr title: "Van Civelik", "vc"
                 text "-reset-css"
             a
-                href: "https://raw.githubusercontent.com/vancivelik/reset-css/master/dist/reset.min.css"
+                href: "https://raw.githubusercontent.com/vancivelik/reset-css/master/reset.min.css"
                 "css"
             text " "
             a
@@ -28,7 +27,7 @@ html ->
             text " "
             a
                 href: "https://github.com/vancivelik/reset-css"
-                "git"
+                "github"
             text " "
             a
                 href: "https://www.npmjs.org/package/vc-reset-css"
@@ -38,7 +37,25 @@ html ->
                 href: "http://github.com/vancivelik/reset-css/issues"
                 "issues"
             text " "
-            text "0.2.0"
+            text this.lodash.escape this.pkg.version
+            p this.lodash.escape this.pkg.description
+            h2 "Motivation to create a project"
+            p "Initiating the development of styles, with a clean slate. It is not enough to just dump the differences between browsers. I want to paint on a blank canvas document."
+            p "No comments in the code, because I do not see them as appropriate."
+            p "Working styles differ from compiled. Compiled code is different from the original. Source code is expected."
+            p "If there is a problem when applying, please report divergent results."
+            h2 "Browser support"
+            ul ->
+                li "Chrome"
+                li "Firefox"
+                li "Opera"
+                li "Safari 6+"
+                li "Explorer 8+"
+            h2 "Thanks"
+            ul ->
+                li a href: "https://github.com/necolas/normalize.css", "Normalize.css"
+                li a href: "https://github.com/LearnBoost/stylus", "Stylus"
+                li a href: "https://github.com/visionmedia/nib", "nib"
 
         fieldset ".reset", ->
             legend ->

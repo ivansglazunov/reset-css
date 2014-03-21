@@ -3,6 +3,6 @@
         "stylus", "nib",
         "coffee-script", "coffeecup",
         "lodash",
-        "grunt", "grunt-contrib-watch", "grunt-contrib-stylus", "grunt-coffeecup"
+        "grunt", "grunt-contrib-watch", "grunt-contrib-copy", "grunt-contrib-stylus", "grunt-coffeecup"
     ]
 }

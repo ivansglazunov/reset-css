@@ -4,9 +4,18 @@ module.exports = (grunt) ->
         pkg: grunt.file.readJSON "package.json"
 
         watch:
-            default:
+            reset:
+                files: ["../master/reset.min.css"]
+                tasks: ["copy:default"]
+            index:
                 files: ["style.styl", "index.coffee"]
                 tasks: ["stylus:default", "coffeecup:default"]
+
+        copy:
+            default:
+                files: [
+                    src: "../master/reset.min.css", dest: "reset.min.css"
+                ]
 
         stylus:
             default:
@@ -20,8 +29,12 @@ module.exports = (grunt) ->
                 expand: false
                 options:
                     lodash: require "lodash"
+                    pkg: grunt.file.readJSON "../master/package.json"
                 files: "index.html": "index.coffee"
 
     grunt.loadNpmTasks "grunt-contrib-watch"
+    grunt.loadNpmTasks "grunt-contrib-copy"
     grunt.loadNpmTasks "grunt-contrib-stylus"
     grunt.loadNpmTasks "grunt-coffeecup"
+
+    grunt.registerTask "default", "watch"
