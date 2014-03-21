@@ -6,5 +6,10 @@
         "type": "git",
         "url": "http://github.com/vancivelik/reset-css.git"
     },
-    "dependencies": {}
+    "dependencies": [
+        "stylus", "nib",
+        "coffee-script", "coffeecup",
+        "lodash",
+        "grunt", "grunt-contrib-watch", "grunt-contrib-stylus", "grunt-coffeecup"
+    ]
 }
