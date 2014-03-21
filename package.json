@@ -1,0 +1,8 @@
+{
+    "dependencies": [
+        "stylus", "nib",
+        "coffee-script", "coffeecup",
+        "lodash",
+        "grunt", "grunt-contrib-watch", "grunt-contrib-stylus", "grunt-coffeecup"
+    ]
+}
