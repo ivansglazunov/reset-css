@@ -83,6 +83,8 @@ table,
 tr,
 td,
 th,
+fieldset,
+legend,
 marquee {
   background: transparent;
 }
@@ -158,6 +160,8 @@ table,
 tr,
 td,
 th,
+fieldset,
+legend,
 marquee {
   margin: 0;
   padding: 0;
@@ -234,6 +238,8 @@ table,
 tr,
 td,
 th,
+fieldset,
+legend,
 marquee {
   outline: none;
   border-color: transparent;
@@ -313,6 +319,8 @@ table:hover,
 tr:hover,
 td:hover,
 th:hover,
+fieldset:hover,
+legend:hover,
 marquee:hover,
 html:active,
 body:active,
@@ -386,6 +394,8 @@ table:active,
 tr:active,
 td:active,
 th:active,
+fieldset:active,
+legend:active,
 marquee:active,
 html:focus,
 body:focus,
@@ -459,6 +469,8 @@ table:focus,
 tr:focus,
 td:focus,
 th:focus,
+fieldset:focus,
+legend:focus,
 marquee:focus {
   outline: none;
   border-color: transparent;
@@ -593,6 +605,8 @@ table,
 tr,
 td,
 th,
+fieldset,
+legend,
 marquee {
   color: inherit;
 }
