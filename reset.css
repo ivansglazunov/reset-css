@@ -788,6 +788,36 @@ hr {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
+input::-webkit-input-placeholder,
+textarea::-webkit-input-placeholder,
+button::-webkit-input-placeholder {
+  font-size: inherit;
+  color: inherit;
+}
+input:-moz-placeholder,
+textarea:-moz-placeholder,
+button:-moz-placeholder {
+  font-size: inherit;
+  color: inherit;
+}
+input::-moz-placeholder,
+textarea::-moz-placeholder,
+button::-moz-placeholder {
+  font-size: inherit;
+  color: inherit;
+}
+input:-ms-input-placeholder,
+textarea:-ms-input-placeholder,
+button:-ms-input-placeholder {
+  font-size: inherit;
+  color: inherit;
+}
+input:disabled,
+textarea:disabled,
+button:disabled {
+  font-size: inherit;
+  color: inherit;
+}
 button,
 select {
   text-transform: none;
