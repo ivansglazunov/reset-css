@@ -18,8 +18,16 @@ html ->
                 abbr title: "Van Civelik", "vc"
                 text "-reset-css"
             a
+                href: "https://raw.githubusercontent.com/vancivelik/reset-css/master/index.styl"
+                ".styl"
+            text " "
+            a
+                href: "https://raw.githubusercontent.com/vancivelik/reset-css/master/reset.css"
+                ".css"
+            text " "
+            a
                 href: "https://raw.githubusercontent.com/vancivelik/reset-css/master/reset.min.css"
-                "css"
+                ".min.css"
             text " "
             a
                 href: "https://github.com/vancivelik/reset-css/archive/master.zip"
