@@ -39,8 +39,6 @@ html ->
             text " "
             text this.lodash.escape this.pkg.version
             p this.lodash.escape this.pkg.description
-            h2 "Motivation to create a project"
-            p "I think, is not enough to smooth out the differences between browsers, I do not like the standard styles. This library smoothes the difference browsers and most of the elements leads to one style."
             h2 "Browser support"
             ul ->
                 li "Chrome"
@@ -213,7 +211,7 @@ html ->
         fieldset ".reset", ->
             legend ->
                 text "input[type=checkbox] without label "
-                abbr ".wtf", title: "How to lead them to uniform style?", "WTF?"
+                a ".wtf", href: "https://github.com/vancivelik/reset-css/issues/5", "issue"
             input type: "checkbox"
             input checked: "checked", type: "checkbox"
             input disabled: "disabled", type: "checkbox"
@@ -234,8 +232,8 @@ html ->
 
         fieldset ".reset", ->
             legend ->
-                text "input[type=checkbox] without label "
-                abbr ".wtf", title: "How to lead to uniform style?", "WTF?"
+                text "input[type=radio] without label "
+                a ".wtf", href: "https://github.com/vancivelik/reset-css/issues/5", "issue"
             input type: "radio"
             input checked: "checked", type: "radio"
             input disabled: "disabled", type: "radio"
@@ -263,26 +261,6 @@ html ->
         fieldset ".reset", ->
             legend "input[type=image] -indents -borders -background -color"
             input type: "image", src: "image.jpg", alt: "image"
-
-        fieldset ".reset", ->
-            legend ->
-                text "input[type=color], input[type=date], input[type=datetime], input[type=datetime-local], input[type=email], input[type=number], input[type=range], input[type=search], input[type=tel], input[type=time], input[type=url], input[type=month], input[type=week] -indents -borders -background -color "
-                abbr title: "I think the default size should be either automatic or 100%. Exact size of - designer case.", "!width"
-                text " "
-                abbr ".wtf", title: "No universal solution!", "!not recommended"
-            input type: "color"
-            input type: "date"
-            input type: "datetime"
-            input type: "datetime-local"
-            input type: "email"
-            input type: "number"
-            input type: "range"
-            input type: "search"
-            input type: "tel"
-            input type: "time"
-            input type: "url"
-            input type: "month"
-            input type: "week"
         
         fieldset ".reset", ->
             legend "comment template !hidden"
@@ -345,5 +323,31 @@ html ->
                     td "td"
 
         fieldset ".reset", ->
+            legend "fieldset legend -indents -borders -background -color"
+            fieldset ->
+                legend "legend"
+                text "fieldset content"
+
+        fieldset ".reset", ->
             legend "marquee -indents -borders -background -color"
             marquee "marquee"
+
+        fieldset ".reset", ->
+            legend ->
+                text "input[color, date, datetime, datetime-local, email, number, range, search, tel, time, url, month, week] -indents -borders -background -color "
+                abbr title: "I think the default size should be either automatic or 100%. Exact size of - designer case.", "!width"
+                text " "
+                abbr ".wtf", title: "No universal solution!", "!not recommended"
+            input type: "color"
+            input type: "date"
+            input type: "datetime"
+            input type: "datetime-local"
+            input type: "email"
+            input type: "number"
+            input type: "range"
+            input type: "search"
+            input type: "tel"
+            input type: "time"
+            input type: "url"
+            input type: "month"
+            input type: "week"
